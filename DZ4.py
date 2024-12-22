@@ -1,47 +1,56 @@
-class Engine:
-    def __init__(self, power):
-        self.power = power
+#That not about me!!!
 
-    def start_engine(self):
-        print(f"Сила двигуна {self.power} .")
-
+class Grandparent:
+    def Kindness(self):
+        print("100% kindness")
 
 
-class Wheels:
-    def __init__(self, wheel_count):
-        self.wheel_count = wheel_count
+class Mom(Grandparent):
+    def beauty(self):
+        print("Im so beauty")
 
-    def rotate_wheels(self):
-        print(f" {self.wheel_count} Колеса.")
+    def gender(self):
+        print("Women")
 
+class Dad:
+    def power(self):
+        print("Not so many power")
 
-
-class Color:
-    def __init__(self, color):
-        self.color = color
-
-    def paint(self):
-        print(f"Машина пофарбована у  {self.color}.")
+    def gender(self):
+        print("Boy")
 
 
+class Child(Dad,Mom):
+    def __init__(self):
+        super().beauty()
+        super().power()
+        print("My gender Women")
 
-class Car(Engine, Wheels, Color):
-    def __init__(self, power, wheel_count, color, brand):
-        Engine.__init__(self, power)
-        Wheels.__init__(self, wheel_count)
-        Color.__init__(self, color)
-        self.brand = brand
-
-    def display_info(self):
-        print(f"Бренд машини: {self.brand}")
-        print(f"Сила двигуна: {self.power} HP")
-        print(f"Колес у машини: {self.wheel_count}")
-        print(f"Колір: {self.color}")
+nick = Child()
 
 
 
-my_car = Car(power=200, wheel_count=4, color="чурвоний", brand="Ферарі")
-my_car.start_engine()
-my_car.rotate_wheels()
-my_car.paint()
-my_car.display_info()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
