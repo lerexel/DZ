@@ -4,10 +4,10 @@ class IterableWithGenerator:
         self.ending = end
 
     def __iter__(self):
-        return (x**2 for x in range(self.starting, self.ending))
+        return (x**0.5 for x in range(self.starting, self.ending))
 
 
-iterable = IterableWithGenerator(1, 10)
+iterable = IterableWithGenerator(1, 52)
 
 for value in iterable:
     print(value)
